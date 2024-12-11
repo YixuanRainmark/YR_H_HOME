@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            .box1{
+                width: 100px;
+                height: 100px;
+                border-style: solid dashed dotted double;
+            }
+            .box2{
+                margin: 10px;
+                width: 480px;
+                height: 320px; 
+                border-style: solid dashed dotted double;
+                border-color: red green blue pink;
+                border-width: 3px 6px 9px 12px;
+                border-radius: 50px 40px 30px 10px;
+                opacity: 8;
+                box-shadow: 12px 5px 5px 5px gray;
+                background-image: url(../Timage/miku.jpg);
+                background-repeat: no-repeat;
+                background-position: 50% 50%; 
+                /* background: linear-gradient(red green blue orange pink); */
+                background: linear-gradient(45deg, red,green,blue); 
+                background: radial-gradient(circle 8em, red,green,blue);
+            }
+            .tri{
+                width: 0px;
+                height: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2">
+            <p id="hitokoto">
+                <a href="#" id="hitokoto_text">:D 获取中...</a>
+              </p>
+              <script>
+                fetch('https://v1.hitokoto.cn')
+                  .then(response => response.json())
+                  .then(data => {
+                    const hitokoto = document.querySelector('#hitokoto_text')
+                    hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                    hitokoto.innerText = data.hitokoto
+                  })
+                  .catch(console.error)
+              </script>
+        </div>
+        
+    </body>
+</html>

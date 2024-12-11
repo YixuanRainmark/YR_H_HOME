@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>伪类选择器</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                display: inline-block;
+                margin: 20px;
+                padding: 10px;
+                background-color: pink;
+                text-decoration: none;
+                border-radius: 10px;
+             
+            }
+            a:link{
+                color: red;
+            }
+            a:visited{
+                color: gray;
+
+            }
+            a:hover{
+                font-weight: 800;
+                background-color: lightpink;
+            }
+            a:active{
+                background-color: deeppink;
+            }
+            a:focus{
+                color: white;
+                background-color: blue;
+            }
+            input[type="text"]:focus{
+                color: white;
+                background-color: blue;
+            }
+            .box1{
+                margin: 10px auto;
+                width: 480px;
+                background-color: pink;
+                border-radius: 20px;
+                text-align: center;
+            }
+            p{
+                margin: 10px;
+                font-size: 24px;
+            }
+            p:first-child{
+                color: red;
+            }
+            /* 获取父元素中的第二个子元素为P的标记 */
+            p:nth-child(2){
+                color: blue;
+            }
+            p:nth-of-type(1){
+                background-color: lightgreen;
+            }
+            p:nth-of-type(2){
+                background-color: lightyellow;
+            }
+            p:nth-of-type(3){
+                background-color: gold;
+            }
+            p:nth-of-type(4){
+                background-color: lightcyan;
+            }
+            p:last-child{
+                color: green;
+            }
+            p:not(.p1){
+                border-radius: 10px;
+            }
+            p::first-letter{
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .p2::first-line{
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#">这是一个伪类选择器</a>
+        <input type="text" name="" id="" value="" >
+        <input type="button" value="ok"/>
+        <hr>
+        <div class="box1">
+            <h3>无题</h3>
+            <p class="p1">相见时难别亦难，东风无力百花残。</p>
+            <p>春蚕到死丝方尽，蜡炬成灰泪始干。</p>
+            <p>晓镜但愁云鬓改，夜吟应觉月光寒。</p>
+            <p>蓬山此去无多路，青鸟殷勤为探看。</p>
+        </div>
+        <p class="p2">
+            他们说零下已结晶的誓言不会坏
+            <br>
+            但爱的状态却不会永远都冰封和透明的存在
+        </p>
+    </body>
+</html>

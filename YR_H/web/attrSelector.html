@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性选择器</title>
+		<style>
+			nav a {
+				border: 2px solid darkslategray;
+				font-size: 30px;
+				display: inline-block;
+				height: 35px;
+				line-height: 30px;
+				width: 40px;
+				-moz-border-radius: 20px;
+				border-radius: 20px;
+				text-align: center;
+				background: darkslategrey;
+				color: #fff;
+				margin-top: 1px;
+				margin-right: 5px;
+				text-decoration: none;
+			}
+		/* 获取有id属性的a */
+		a[id]{
+			background-color: gold;
+		}
+		/* E[attr="value"] */
+		/* #first{ */
+		a[title="w3c{"]{
+			color: red;
+		}
+		
+		/* E[attr~="value"] */
+		/* #first{ */
+		a[title~="web"]{
+			color: green;
+		}
+		
+		/* E[attr^="value"] 获取title属性以http开头的超链接*/
+		a[title^="http"]{
+			color: orange;
+		}
+		
+		a[title$="link"]{
+			background-color: lightgreen;
+		}
+		
+		a[title*="t"]{
+			color: pink;
+		}
+		
+		a[lang|="zh"]{
+			border: 2px dashed red;
+		}
+		</style>
+	</head>
+	<body>
+		<nav align="center">
+			<a href="#" title="w3c" id="first">1</a>
+			<a href="#" title="test web" lang="zh">2</a>
+			<a href="#" title="this is a link" lang="zh-cn">3</a>
+			<a href="#" lang="zh-tw">4</a>
+			<a href="#" title="zh-cn">5</a>
+			<a href="#" title="web link" lang="zh">6</a>
+			<a href="#" title="open the web" lang="cn">7</a>
+			<a href="#" title="close the web" lang="en-zh">8</a>
+			<a href="#" title="http://www.baidu.com">9</a>
+			<a href="#" id="last">10</a>
+			<!--添加10个超链接标签-->
+		</nav>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>弹性布局演示</title>
+		<style>
+			.box1{
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: space-evenly;
+				align-items: baseline;
+				align-content: center;
+				margin: 20px auto;
+				padding: 20px;
+				width: 480px;
+				height: 320px;
+				background-color: pink;
+			}
+			
+			.box11{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: baseline;
+				align-content: center;
+				margin: 20px auto;
+				padding: 20px;
+				width: 480px;
+				height: 320px;
+				background-color: pink;
+			}
+			
+			.box2{
+				/* order: 1; */
+				/* flex: 1; */
+				width: 100px;
+				background-color: lightblue;
+			}
+			
+			.box3{
+				/* order: 3; */
+				/* flex: 8; */
+				flex: 1;
+				background-color: aquamarine;
+			}
+			.box4{
+				/* order: 2; */
+				/* flex: 1; */
+				width: 100px;
+				background-color: plum;
+			}
+			
+			p{
+				border: 1px dotted blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<div class="box2">box2</div>
+			<div class="box3">box3
+			<p>这是段落1</p>
+			<p>这是段落2</p>
+			<p>这是段落3</p></div>
+			<div class="box4">box4</div>
+		</div>
+		<div class="box11">
+			<div class="box2">box2</div>
+			<div class="box3">box3
+			<p>这是段落1</p>
+			<p>这是段落2</p>
+			<p>这是段落3</p></div>
+			<div class="box4">box4</div>
+		</div>
+	</body>
+</html>

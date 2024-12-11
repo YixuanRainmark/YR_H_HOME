@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格演示</title>
+		<style>
+			.box1{
+				margin: 0 auto;
+				padding: 20px;
+				width: 480px;
+				background-color: pink;
+			}
+			table{
+				width: 80%;
+				border: 2px solid green;
+				margin: 0 auto;
+				border-collapse: collapse;
+			}
+			caption{
+				margin: 10px;
+				font-size: 1.2em;
+				font-weight: 600;
+				letter-spacing: .2em;
+			}
+			th,td{
+				height: 32px;
+				border: 1px solid blue;
+				/*border-spacing: 0;*/
+				text-align: center;
+			}
+			tr:nth-of-type(odd){
+				background-color: lightblue;
+			}
+			tr:nth-of-type(even){
+				background-color: lightgreen;
+			}
+			tr:hover{
+				background-color: purple;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+		<table>
+			<caption>课程表</caption>
+			<tr>
+				<th>星期</th>
+				<th>1--2</th>
+				<th>3--4</th>
+				<th>5--6</th>
+				<th>7--8</th>
+				<th>9--10</th>
+			</tr>
+			<tr>
+				<td>星期一</td>
+				<td>html</td>
+				<td>css</td>
+				<td>sql</td>
+				<td>java</td>
+				<td>html</td>
+			</tr>
+			<tr>
+				<td>星期二</td>
+				<td>html</td>
+				<td>css</td>
+				<td>sql</td>
+				<td>java</td>
+				<td>html</td>
+			</tr>	
+			<tr>
+				<td>星期三</td>
+				<td>html</td>
+				<td>css</td>
+				<td>sql</td>
+				<td>java</td>
+				<td>html</td>
+			</tr>	
+			<tr>
+				<td>星期四</td>
+				<td>html</td>
+				<td>css</td>
+				<td>sql</td>
+				<td>java</td>
+				<td>html</td>
+			</tr>
+			<tr>
+				<td>星期五</td>
+				<td>html</td>
+				<td>css</td>
+				<td>sql</td>
+				<td>java</td>
+				<td>html</td>
+			</tr>
+		</table>
+	</body>
+</html>
